@@ -34,3 +34,24 @@ public class RedRobin extends Bird {
         migrationMonth = month;
     }
 }
+
+//NHU Version
+//public class RedRobin extends Bird{
+//private String migrationMonth;
+
+//@Override
+//public int getSpeed(){
+//return 10;}
+
+//@override
+//public String color(){
+//return "red";}
+
+//@Override
+//public String getMigrationMonth(){
+//return migrationMonth;}
+
+//@Override
+//public void setMigrationMonth(String migrationMonth){
+//this.migrationMonth = migrationMonth;}
+//}

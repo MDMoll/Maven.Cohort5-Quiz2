@@ -10,22 +10,70 @@ public class ArrayUtility {
                 .toArray(Integer[]::new);
     }
 
-    public Integer[] rotate(Integer[] array, Integer index) {
+    //NHU version
+    //public Integer[] merge(Integer[] array1, Integer[] array2) {
+    //int newLength = array1.length + array2.length;
+
+    //Integer[] numbers = Arrays.copyOf(array1, newLength);
+
+    //int n = array1.length;
+
+    //for (int i = 0; i < array2.length; i++){
+    //numbers[n] = array2[i];
+    //n++;}
+
+    //Shorter way to Copy Array
+    //System.arraycopy(array2, 0, numbers, array1.length, array2.length)
+
+    //return numbers;
+
+    //My (semi-working) version
+    /*public Integer[] rotate(Integer[] array, Integer index) {
         int start = array[0];
         System.arraycopy(array, index, array, 0, array.length - 1);
         array[array.length - 1] = start;
         return array;
-    }
+    }*/
+
+    //NHU Version
+    public Integer[] rotate(Integer[] array, Integer index){
+    Integer[] rotated = new Integer[array.length];
+    int rotatedIndex = 0;
+
+    //THIS COPIES THE INDEX TO THE END OF THE ARRAY
+    for(int i = index; i < array.length; i++){
+    rotated[rotatedIndex] = array[i];
+    rotatedIndex++;}
+
+    //COPIES THE BEGINNING UP TO THE INDEX
+    for(int i = 0; i < index; i++){
+    rotated[rotatedIndex] = array[i];
+    rotatedIndex++;}
+
+    return rotated;}
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-    return getValueCount(array1, valueToEvaluate) + getValueCount(array2, valueToEvaluate);}
+        return getValueCount(array1, valueToEvaluate) + getValueCount(array2, valueToEvaluate);
+    }
 
-    private int getValueCount(Integer[] array, Integer valueToEvaluate){
+    private int getValueCount(Integer[] array, Integer valueToEvaluate) {
         int count = 0;
-        for (int i : array){
-            if(i == valueToEvaluate){
-              count++;}}
-    return count;}
+        for (int i : array) {
+            if (i == valueToEvaluate) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    //NHU Version of Helper Method for what I did with getValueCount
+    //public int count(Integer[] array, Integer valueToCount){
+    //int count = 0;
+    //for (int i = 0; i < array.length; i++){
+    //if (valueToCount.equals(array[i])){
+    //count++;}
+    //}
+    //return count;}
 
     public Integer mostCommon(Integer[] array) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -36,6 +84,20 @@ public class ArrayUtility {
         return Collections.max(map.entrySet(),
                 new EntryComparator()).getKey();
     }
+
+    //NHU Version
+    //public Integer mostCommon(Integer[] array){
+    //Integer common = array[0];
+    //int commonCount = count(array, common);
+    //for (int i = 0; i < array.length; i++){
+    //Integer currentNumber = array[i];
+    //int currentCount = count(array, currentNumber);
+    //if (currentCount > commonCount){
+    //common = currentNumber;
+    //commonCount = currentCount;
+    //}
+    //}
+    //return common;}
 
     private static class EntryComparator implements Comparator<Map.Entry<Integer, Integer>> {
         @Override

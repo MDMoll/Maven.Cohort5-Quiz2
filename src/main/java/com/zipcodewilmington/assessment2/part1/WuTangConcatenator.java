@@ -17,4 +17,8 @@ public class WuTangConcatenator {
     public Boolean isWuTang() {
         return input % 15 == 0;
     }
+
+    //NHU Version
+    //public Boolean isWuTang() {
+    //return isTang() && isWu();}
 }

@@ -16,6 +16,19 @@ public class IntegerArrayUtilities {
         return result.toArray(new Integer[0]);
     }
 
+    //NHU version
+    //public Integer[] range(int start, int stop){
+    //int length = stop - start + 1;
+
+    //Integer[] numbers = new Integer[length];
+    //int count = start;
+
+    //for (int i = 0; i < length; i++){
+    //mumbers[i] = count;
+    //count++;
+
+    //return numbers;}
+
     public Integer getSumOfFirstTwo(Integer[] array) {
         return array[0] + array[1];
     }

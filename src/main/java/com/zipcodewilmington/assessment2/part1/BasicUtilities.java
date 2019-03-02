@@ -18,4 +18,10 @@ public class BasicUtilities {
         char first = string.charAt(0);
         return first == character || first == character + 32 || first == character - 32;
     }
+
+    //NHU Version
+    //public Boolean startsWith(String string, Character character){
+    //String lowerCaseString = string.toLowerCase();
+    //String charLowerCase = character.toString().toLowerCase();
+    //return lowerCaseString.startsWith(charLowerCase);
 }

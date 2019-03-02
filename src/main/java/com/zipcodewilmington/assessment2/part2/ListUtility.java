@@ -14,12 +14,24 @@ public class ListUtility {
     }
 
     public Integer size() {
-        return listUtility.size();
+        return null;
+        //D'OH! I had this!
+        // NHU Version
+        // return listUtility.size();
     }
 
     public List<Integer> getUnique() {
         return listUtility.stream().distinct().collect(Collectors.toList());
     }
+
+    //NHU Version
+    //List<Integer> unique = new ArrayList<>();
+
+    //for (Integer number : list){
+    //if (!unique.contains(number)) {
+    //unique.add(number);}
+    //}
+    //return unique;}
 
     public String join() {
         StringBuilder joinedList = new StringBuilder();
@@ -30,6 +42,17 @@ public class ListUtility {
         joinedList.deleteCharAt(joinedList.length() - 1);
         return joinedList.toString();
         //return listUtility.stream().collect(Collectors.joining(", "));
+
+        //NHU Version
+        //public String join(){
+        //String result = "";
+
+        //for (int i = 0; i < list.size(); i++){
+        //result += list.get(i);
+        // if (i < list.size() - 1) {
+        // result += ", ";}
+        //}
+        //return result;}
     }
 
     public Integer mostCommon() {
@@ -47,6 +70,17 @@ public class ListUtility {
         }
         return mostFrequentValue;
     }
+
+    //NHU Version
+    //public Integer mostCommon() {
+    //Integer common = list.get(0);
+    //int commonCount = countOccurence(common);
+
+    //for (Integer currentNumber : list) {
+    // int currentCount = countOccurence(currentNumber);
+    //if (currentCount > commonCount) {
+    //common = currentNumber;
+    //commonCount = currentCount;
 
     public Boolean contains(Integer valueToAdd) {
         return listUtility.contains(valueToAdd);

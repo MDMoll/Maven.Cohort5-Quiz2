@@ -25,3 +25,18 @@ public class Horse implements Animal {
         return 40;
     }
 }
+
+//NHU Version
+//public class Horse implements Animal {
+//@Override
+//public String move(){
+//return "gallop";}
+
+//@Override
+//public int getSpeed(){
+//return 40;}
+
+//@Override
+//public String color(){
+//return "brown";}
+//}

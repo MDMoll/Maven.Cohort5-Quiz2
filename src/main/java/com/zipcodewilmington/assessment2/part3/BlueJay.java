@@ -25,3 +25,15 @@ public class BlueJay extends Bird {
     }
 
 }
+
+//NHU Version
+//public class BlueJay extends Bird {
+//@Override
+//public int getSpeed() {
+//return 13;}
+
+//@Override
+//public String color(){
+//return "blue";
+//}
+//}
